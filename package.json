@@ -1,0 +1,33 @@
+{
+  "name": "react-draw",
+  "version": "0.0.1",
+  "description": "component for drawing",
+  "main": "dist/react-draw.js",
+  "scripts": {
+    "build": "./node_modules/.bin/babel lib --out-dir dist",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cezary/react-draw.git"
+  },
+  "keywords": [
+    "react",
+    "draw"
+  ],
+  "author": "Cezary Wojtkowski <cezary@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cezary/react-draw/issues"
+  },
+  "homepage": "https://github.com/cezary/react-draw",
+  "dependencies": {
+    "react": "^0.13.0 < 0.14.0"
+  },
+  "devDependencies": {
+    "babel": "^5.2.9",
+    "babel-core": "^5.2.9",
+    "babel-loader": "^5.0.0",
+    "webpack": "^1.8.11"
+  }
+}
