@@ -1,7 +1,7 @@
 require('babel/polyfill');
 
 let React = require('react');
-let Draw = require('./lib/react-draw');
+let Draw = require('./components/react-draw');
 
 let App = React.createClass({
   getInitialState() {
@@ -34,14 +34,16 @@ let App = React.createClass({
         <div>
           <Draw ref='draw' tool={this.state.tool} width={this.state.width} />
           <div>
-            <button onClick={this.onUndoClick}>undo</button>
-            <select onChange={this.onToolSelect} defaultValue={this.state.tool}>
-              <option value='pencil'>pencil</option>
-              <option value='fill'>fill</option>
-              <option value='line'>line</option>
-              <option value='circle'>circle</option>
-              <option value='rect'>rect</option>
-            </select>
+            <div className='controls'>
+              <button onClick={this.onUndoClick}>undo</button>
+            </div>
+            <div className='controls'>
+              <button onClick={this.onToolSelect} value='pencil'>pencil</button>
+              <button onClick={this.onToolSelect} value='fill'>fill</button>
+              <button onClick={this.onToolSelect} value='line'>line</button>
+              <button onClick={this.onToolSelect} value='circle'>circle</button>
+              <button onClick={this.onToolSelect} value='rect'>rect</button>
+            </div>
             <input onChange={this.onWidthChange} type='range' min='1' max='50' value={this.state.width} />
             <input onChange={this.onWidthChange} type='number' min='1' max='50' value={this.state.width} />
           </div>
